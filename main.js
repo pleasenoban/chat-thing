@@ -11,7 +11,7 @@ try {
     var channels = { "default": [] };
 }
 
-const port = config.port || 8080;
+const port = process.env.PORT || config.port || 8080;
 const cachelen = config.cache || 50;
 const signals = ["SIGINT", "SIGTERM"];
 const saveEnabled = config.save || true;
