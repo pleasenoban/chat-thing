@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>chat</title>
+
+  <link rel="stylesheet" href="/static/css/main.css">
+  <link rel="icon" type="image/x-icon" href="/static/imgs/icon-for-chat-0.jpg">
+</head>
+
+<body>
+  <!-- new html spec go brr -->
+  <dialog id="addchannel">
+    <form method="dialog" id="formdia">
+      <p>
+        <input type="text" id="addchannelin" autocomplete="off" placeholder="enter channel name">
+      </p>
+      <div id="diabtns">
+        <button type="button" onclick="can();" id="diacan">cancel</button>
+        <button type="button" onclick="add();" id="diaadd">add</button>
+      </div>
+    </form>
+  </dialog>
+  <div id="nav">
+    <div id="home" onclick="home();">
+      <img src="/static/imgs/icon-for-chat-0.jpg" alt="chat" id="logo">
+      <h1>chat</h1>
+    </div>
+    <div id="end">
+      <h4 id="userwel"></h4>
+      <button id="logout" onclick="logout();">
+        <img src="/static/imgs/User-Interface-Logout-icon.png" width="20px">
+        logout
+      </button>
+    </div>
+  </div>
+  <button class="channel" id="new" onclick="showModal();">new</button>
+  <div id="channels"></div>
+  <ul id="messages"></ul>
+  <form id="form" action="">
+    <input id="input" placeholder="message" required autocomplete="off" maxlength="300" />
+    <button>&#x27A4; send</button>
+  </form>
+  <script src=/socket.io/socket.io.js></script>
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>

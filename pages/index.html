@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login - chat</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="icon" type="image/x-icon" href="/static/imgs/icon-for-chat-0.jpg">
+</head>
+
+<body>
+    <dialog id="fail">
+        <form method="dialog" id="diaform">
+            <h1>invalid input</h1>
+            <button id="diaok">ok</button>
+        </form>
+    </dialog>
+    <div id="nav">
+        <div id="home" onclick="home();">
+            <img src="/static/imgs/icon-for-chat-0.jpg" alt="chat" id="logo">
+            <h1>chat</h1>
+        </div>
+        <div id="end"></div>
+    </div>
+    <form id="login-form">
+        <div id="login-div">
+            <h1 id="login-text">login</h1>
+            <p><input type="text" id="username" required autocomplete="off" placeholder="username" maxlength="30"></p>
+            <p><input type="password" id="password" required autocomplete="off" placeholder="password" maxlength="50"></p>
+            <p>
+                <input type="checkbox" id="show" onchange="showpass();">
+                <label for="show">show password</label>
+            </p>
+            <p id="remcont">
+                <input type="checkbox" id="rem">
+                <label for="rem">remember me</label>
+            </p>
+            <div id="btns">
+                <a href="/signup.html" id="signup">sign up</a>
+                <button id="signin">sign in</button>
+            </div>
+        </div>
+    </form>
+    <script src="/static/js/login.js"></script>
+</body>
+
+</html>
